@@ -1,2 +1,2 @@
-# sharechatgemstopaymentcalculator
-About Rainbow Agency Created To Find Sharechat Gems With Payment Calculation
+# payment-calculator
+Rainbow Agency sharechat payment calculator

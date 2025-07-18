@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rainbow Agency Sharechat Payment Calculator</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			background: linear-gradient(#edebeb,#7484e9,#edeeed);
+		}
+
+		.container {
+			margin: 30px auto;
+			padding: 80px;
+			background: linear-gradient(to top,#47c1f5#,#366CDAA);
+			box-shadow: 0px 10px 30px hwb(277 6% 15% / 0.921);
+			max-width: 500px;
+			border-radius: 8px;
+			text-align: center;
+		}
+
+		h1 {
+			margin-top: 0;
+			font-size: 33px;
+			font-weight: bold;
+			color: hwb(340 93% 6% / 0.789);
+			text-shadow: 2px 2px rgb(10, 10, 10);
+			letter-spacing: 2px;
+			text-transform: uppercase;
+		}
+
+		.card {
+			margin-top: 20px;
+			padding: 20px;
+			background: linear-gradient(to bottom, #e4e793 0%, hwb(196 10% 29% / 0.836) 100%);
+			box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+			max-width: 500px;
+			border-radius: 8px;
+			text-align: center;
+		}
+
+		.result {
+			margin-top: 20px;
+			padding: 20px;
+			background: linear-gradient(to bottom, hwb(259 11% 17%) 0%, #e48525dd 100%);
+			box-shadow: 0px 2px 4px rgba(84, 65, 65, 0.881);
+			max-width: 500px;
+			border-radius: 8px;
+			text-align: center;
+		}
+
+		input[type="number"] {
+			width: 200px;
+			border-radius: 4px;
+			padding: 5px;
+			border: none;
+			outline: none;
+			background:none;
+			box-shadow: 0px 1px 2px #dddddcdc;
+		}
+
+		button {
+			padding: 8px 3px;
+			background: linear-gradient(to bottom, #d00f8c 0%, rgb(67, 75, 237) 100%);
+			color: rgb(191, 197, 185);
+			border: none;
+			border-radius: 8px;
+			font-size: 14px;
+			font-weight: bold;
+			box-shadow: 2px 2px 0px hwb(63 30% 27%);
+			cursor: pointer;
+			transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+		}
+
+		button:hover {
+			background: linear-gradient(to bottom, hsl(271, 45%, 10%) 0%, hwb(316 1% 88%) 100%);
+			transform: translateY(-2px);
+			box-shadow: 4px 4px 0px hwb(307 51% 42%);
+		}
+
+		p {
+			font-size: 44px;
+			font-weight: bold;
+			color: hwb(30 20% 5%);
+			text-shadow: 2px 2px hsl(321, 87%, 73%);
+			letter-spacing: 2px;
+			text-transform: uppercase;
+		}
+
+		.pink {
+			color: rgb(23, 97, 214)
+			.red {
+			color: #520052;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>RAINBOW AGENCY SHARECHAT PAYMENT CALCULATOR</h1>
+		<div class="card">
+			<label for="gems">Gems to Amount:</label>
+			<input type="number" id="gems" name="gems" min="0" max="1000000" required>
+			<button type="button" onclick="calculate()">Calculate </button>
+		</div>
+		<div id="paymentResult" class="result"></div>
+	</div>
+<h1>Designed By Developer Karthi</h1>
+		<div class="card">
+	<script>
+		function calculate() {
+  var gems = parseInt(document.getElementById("gems").value);
+  var payment = 0;
+
+  if (gems < 25000) {
+    document.getElementById("paymentResult").innerHTML = "Not Eligible Salary";
+    document.getElementById("paymentResult").style.color = "red";
+    return;
+  } else if (gems > 1150000000) {
+    document.getElementById("paymentResult").innerHTML = "Payment for this gems is not fixed";
+    document.getElementById("paymentResult").style.color = "red";
+    return;
+  }
+
+  // Calculation for eligible gems range
+          else if (gems >= 1150000000 && gems < 1150000010) {
+				payment = 8957895 + ((gems - 1150000000) / 10000) * 60 + 484200;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+		} else if (gems >= 1050000000 && gems < 1150000000) {
+				payment = 8178947 + ((gems - 1050000000) / 10000) * 60 + 442100;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+		} else if (gems >= 950000000 && gems < 1050000000) {
+				payment = 7400000 + ((gems - 950000000) / 10000) * 60 + 400000;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+		} else if (gems >= 850000000 && gems < 950000000) {
+				payment = 7157900 + ((gems - 850000000) / 10000) * 60 + 357900;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+		} else if (gems >= 750000000 && gems < 850000000) {
+				payment = 6157900 + ((gems - 750000000) / 10000) * 60 + 315800;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+		} else if (gems >= 650000000 && gems < 750000000) {
+				payment = 5063200 + ((gems - 650000000) / 10000) * 60 + 273700;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+		} else if (gems >= 550000000 && gems < 650000000) {
+				payment = 4284200 + ((gems - 550000000) / 10000) * 60 + 231600;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+		} else if (gems >= 450000000 && gems < 550000000) {
+				payment = 3505300 + ((gems - 450000000) / 10000) * 60 + 189450;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+		} else if (gems >= 350000000 && gems < 450000000) {
+				payment = 2726300 + ((gems - 350000000) / 10000) * 60 + 147350;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+		} else if (gems >= 272000000 && gems < 350000000) {
+				payment = 2118700 + ((gems - 272000000) / 10000) * 60 + 114550;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+		} else if (gems >= 238000000 && gems < 272000000) {
+				payment = 1853900 + ((gems - 238000000) / 10000) * 60 + 100200;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+		} else if (gems >= 204000000 && gems < 238000000) {
+				payment = 1568900 + ((gems - 204000000) / 10000) * 60 + 85900;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+		} else if (gems >= 170000000 && gems < 204000000) {
+				payment = 1307400 + ((gems - 170000000) / 10000) * 60 + 71600;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+		} else if (gems >= 135000000 && gems < 170000000) {
+				payment = 1038200 + ((gems - 135000000) / 10000) * 60 + 56850;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+		} else if (gems >= 102000000 && gems < 135000000) {
+				payment = 784400 + ((gems - 102000000) / 10000) * 60 + 42950;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+		} else if (gems >= 85000000 && gems < 102000000) {
+				payment = 653700 + ((gems - 85000000) / 10000) * 60 + 35800;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+		} else if (gems >= 68000000 && gems < 85000000) {
+				payment = 523000 + ((gems - 68000000) / 10000) * 60 + 28650;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+		} else if (gems >= 51000000 && gems < 68000000) {
+				payment = 392200 + ((gems - 51000000) / 10000) * 60 + 53700;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+		} else if (gems >= 34000000 && gems < 51000000) {
+				payment = 239600 + ((gems - 34000000) / 10000) * 60 + 35800;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+		} else if (gems >= 24000000 && gems < 34000000) {
+				payment = 170400 + ((gems - 24000000) / 10000) * 60 + 25250;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+		} else if (gems >= 20000000 && gems < 24000000) {
+				payment = 139800 + ((gems - 20000000) / 10000) * 60 + 21050;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+		} else if (gems >= 17000000 && gems < 20000000) {
+				payment = 121000 + ((gems - 17000000) / 10000) * 60 + 21450;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+		} else if (gems >= 13000000 && gems < 17000000) {
+				payment = 90500 + ((gems - 13000000) / 10000) * 60 + 16400;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+		} else if (gems >= 9525000 && gems < 13000000) {
+				payment = 66900 + ((gems - 9525000) / 10000) * 60 + 12050;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+		} else if (gems >= 7500000 && gems < 9525000) {
+				payment = 52900 + ((gems - 7500000) / 10000) * 60 + 9450;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+	    } else if (gems >= 5450000 && gems < 7500000) {
+				payment = 40000 + ((gems - 5450000) / 10000) * 60 + 6900;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+	    } else if (gems >= 3750000 && gems < 5450000) {
+				payment = 27900 + ((gems - 3750000) / 10000) * 60 + 4750;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+	    } else if (gems >= 3225000 && gems < 3750000) {
+				payment = 24300 + ((gems - 3225000) / 10000) * 60 + 4050;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+	    } else if (gems >= 2725000 && gems < 3225000) {
+				payment = 20000 + ((gems - 2725000) / 10000) * 60 + 3450;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+	    } else if (gems >= 2200000 && gems < 2725000) {
+				payment = 17400 + ((gems - 2200000) / 10000) * 60 + 2300;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+	    } else if (gems >= 1750000 && gems < 2200000) {
+				payment = 14000 + ((gems - 1750000) / 10000) * 60 + 1850;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+	    } else if (gems >= 1500000 && gems < 1750000) {
+				payment = 12100 + ((gems - 1500000) / 10000) * 60 + 1600;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+	    } else if (gems >= 1300000 && gems < 1500000) {
+				payment = 10500 + ((gems - 1300000) / 10000) * 60 + 1350;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+	    } else if (gems >= 1000000 && gems < 1300000) {
+				payment = 9100 + ((gems - 1000000) / 10000) * 60 + 650;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+	    } else if (gems >= 775000 && gems < 1000000) {
+				payment = 7050 + ((gems - 775000) / 10000) * 60 + 500;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+	    } else if (gems >= 575000 && gems < 775000) {
+				payment = 5200 + ((gems - 575000) / 10000) * 60 + 350;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+	    } else if (gems >= 400000 && gems < 575000) {
+				payment = 3600 + ((gems - 400000) / 10000) * 60 + 250;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+	    } else if (gems >= 350000 && gems < 400000) {
+				payment = 3100 + ((gems - 350000) / 10000) * 60 + 200;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+        } else if (gems >= 250000 && gems < 350000) {
+				payment = 2200 + ((gems - 250000) / 10000) * 60 + 50;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+        } else if (gems >= 200000 && gems <= 250000) {
+				payment = 1900 + ((gems - 200000) / 10000) * 60 + 50;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+        } else if (gems >= 150000 && gems < 200000) {
+				payment = 1500 + ((gems - 150000) / 10000) * 60 + 50;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+        } else if (gems >= 100000 && gems < 150000) {
+				payment = 1000 + ((gems - 100000) / 10000) * 60;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+        } else if (gems >= 50000 && gems < 100000) {
+				payment = 500 + ((gems - 50000) / 10000) * 60;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+			} else if (gems >= 25000 && gems < 50000) {
+				payment = 250 + ((gems - 25000) / 10000) * 60;
+				document.getElementById("paymentResult").innerHTML = "TOTAL PAY: " + payment.toFixed(2) + " RS.";
+				document.getElementById("paymentResult").style.color = "black";
+			}
+			// Deduct 10% TDS from the payment
+			payment *= 0.9;
+			document.getElementById("paymentResult").innerHTML += "<br>FINAL PAY: " + payment.toFixed(2) + " RS.";
+		}
+	</script>
+</body>
+</html>
